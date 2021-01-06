@@ -1,12 +1,9 @@
 ## Hive面试题整理（一）
 
 ### 1、Hive表关联查询，如何解决数据倾斜的问题？（☆☆☆☆☆）
-&emsp; 1）倾斜原因：map输出数据按key Hash的分配到reduce中，由于key分布不均匀、业务数据本身的特、建表时考虑不周、等原因造成的reduce 上的数据量差异过大。  
-&emsp; （1）key分布不均匀;  
-&emsp; （2）业务数据本身的特性;  
-&emsp; （3）建表时考虑不周;  
-&emsp; （4）某些SQL语句本身就有数据倾斜;  
-&emsp; 如何避免：对于key为空产生的数据倾斜，可以对其赋予一个随机值。  
+&emsp; 1）倾斜原因：map输出数据按key Hash的分配到reduce中，由于key分布不均匀造成的单个reduce处理的数据量过大
+&emsp; （1）key分布不均匀;    
+&emsp; 举例：对于key为空产生的数据倾斜，可以对其赋予一个随机值。  
 &emsp; 2）解决方案  
 &emsp; （1）参数调节：  
 &emsp; &emsp; hive.map.aggr = true  
