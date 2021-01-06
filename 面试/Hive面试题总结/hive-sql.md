@@ -1,5 +1,7 @@
 https://www.cnblogs.com/qingyunzong/p/8747656.html
 
+https://jiamaoxiang.top/2019/10/15/%E7%BB%8F%E5%85%B8Hive-SQL%E9%9D%A2%E8%AF%95%E9%A2%98/
+
 目录
 
 一、求单月访问次数和总访问次数
